@@ -1,0 +1,4 @@
+string task_name
+diagnostic_msgs/KeyValue agent_nbrs
+diagnostic_msgs/KeyValue[] formation_shape
+diagnostic_msgs/KeyValue[] desired_distance

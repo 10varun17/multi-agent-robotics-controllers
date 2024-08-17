@@ -1,0 +1,12 @@
+# request - client->server to initiate a new goal
+Task task 
+
+---
+
+# result - sent when the server is done
+Result result
+
+---
+
+# status feedback - updates about the requested goal
+Feedback feedback

@@ -30,7 +30,7 @@ git clone https://github.com/10varun17/multi-agent-robotics-controllers.git
 ```
 
 ### Building the packages
-From the root of the repo `multi-agent-robotics--controllers`, navigate to the root of the ROS2 workspace.
+From the root of the repo `multi-agent-robotics-controllers`, navigate to the root of the ROS2 workspace.
 
 ```
 cd ros2_multi_agent_ws
@@ -122,7 +122,7 @@ If we need to run the controllers for `n` not equal to 3 for formation control a
 Currently, the formation control client is configured to control 3 agents with position-based and distance-based formation control. 
 
 #### Position-based formation control
-Edit the following lines of code in `multi-agent-robotics--controllers/ros2_multi_agent_ws/src/formation_controller/formation_controller/fc_client.py` as per the requirement.
+Edit the following lines of code in `multi-agent-robotics-controllers/ros2_multi_agent_ws/src/formation_controller/formation_controller/fc_client.py` as per the requirement.
 
 ```python
 ### Position based
@@ -152,7 +152,7 @@ self.declare_parameter("is_position_based", True, control_law_type_desc)
 ```
 
 #### Distance-based formation control
-Edit the following lines of code in `multi-agent-robotics--controllers/ros2_multi_agent_ws/src/formation_controller/formation_controller/fc_client.py` as per the requirement.
+Edit the following lines of code in `multi-agent-robotics-controllers/ros2_multi_agent_ws/src/formation_controller/formation_controller/fc_client.py` as per the requirement.
 
 ```python
 ### Distance based
@@ -169,7 +169,7 @@ desired_distances ={
 Note:- For `desired_distances` dictionary, it's mandatory to have all the permutations of distances. For example, the distance between agents `i` and `j`, `d_ij` is equal to the distance between agents `j` and `i`, `d_ji`, but we need to provide the key value pairs for both distances.
 
 ### Leader Follower
-Edit the following lines of code in `multi-agent-robotics--controllers/ros2_multi_agent_ws/src/leader_follower/leader_follower/lf_client.py` as per the requirement.
+Edit the following lines of code in `multi-agent-robotics-controllers/ros2_multi_agent_ws/src/leader_follower/leader_follower/lf_client.py` as per the requirement.
 
 ```python
 ### Distance based
@@ -189,6 +189,6 @@ desired_distances ={
 Note:- For `desired_distances` dictionary, it's mandatory to have all the permutations of distances. For example, the distance between agents `i` and `j`, `d_ij` is equal to the distance between agents `j` an `i`, `d_ji`, but we need to provide the key value pairs for both distances.
 
 ### Client's launch file change
-In `multi-agent-robotics--controllers/ros2_multi_agent_ws/src/launch_multi_agent/launch/`, open the launch files for respective tasks and make the changes to the current node parameters and add new nodes as per the property of the new graph with `n` agents. The parameters should be self-explanatory in the launch files.
+In `multi-agent-robotics-controllers/ros2_multi_agent_ws/src/launch_multi_agent/launch/`, open the launch files for respective tasks and make the changes to the current node parameters and add new nodes as per the property of the new graph with `n` agents. The parameters should be self-explanatory in the launch files.
 
 **⚠️ IMPORTANT:** After making the changes, start all the process again from the section **`Building the packages`.**

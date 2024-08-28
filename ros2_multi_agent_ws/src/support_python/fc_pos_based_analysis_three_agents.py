@@ -111,7 +111,7 @@ final_ys = np.array([df.loc[df["y00"].index[-1], "y00"], df.loc[df["y01"].index[
 ci = np.array([initial_xs.mean(), initial_ys.mean()])
 cf = np.array([final_xs.mean(), final_ys.mean()])
 
-ax[3].scatter(initial_xs, initial_ys, s=20, c="dimgrey")
+# ax[3].scatter(initial_xs, initial_ys, s=20, c="dimgrey")
 ax[3].scatter(final_xs, final_ys, s=30, c="black")
 
 spring_patch = mlines.Line2D([], [], color=plt.cm.autumn_r(0.1), marker='o', linestyle='None', markersize=10, label='agent00')

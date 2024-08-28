@@ -124,7 +124,7 @@ df.plot(x="x01", y="y01", kind="scatter", s=10, colormap="winter_r", c="Time (se
 df.plot(x="x02", y="y02", kind="scatter", s=10, colormap="Greens", c="Time (sec)", ax=ax[3], label='agent02', colorbar=False)
 df.plot(x="x03", y="y03", kind="scatter", s=10, colormap="cool", c="Time (sec)",  ax=ax[3], label='agent03', colorbar=False)
 
-ax[3].scatter(initial_xs, initial_ys, s=20, c="dimgrey")
+# ax[3].scatter(initial_xs, initial_ys, s=20, c="dimgrey")
 ax[3].scatter(final_xs[1:], final_ys[1:], s=30, c="darkred")
 ax[3].scatter(final_xs[0], final_ys[0], s=45, c="black")
 

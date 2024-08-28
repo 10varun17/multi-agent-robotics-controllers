@@ -113,7 +113,7 @@ cf = np.array([final_xs.mean(), final_ys.mean()])
 # ax[3].annotate('ci', (ci[0], ci[1]), textcoords="offset points", xytext=(15,-3), ha='center')
 # ax[3].annotate('cf', (cf[0], cf[1]), textcoords="offset points", xytext=(-15,-3), ha='center')
 
-ax[3].scatter(initial_xs, initial_ys, s=20, c="dimgrey")
+# ax[3].scatter(initial_xs, initial_ys, s=20, c="dimgrey")
 ax[3].scatter(final_xs, final_ys, s=30, c="black")
 ax[3].annotate('00', (final_xs[0], final_ys[0]), textcoords="offset points", xytext=(-15,-4), ha='center')
 ax[3].annotate('01', (final_xs[1], final_ys[1]), textcoords="offset points", xytext=(15,-4), ha='center')

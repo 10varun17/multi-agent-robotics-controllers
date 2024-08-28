@@ -97,7 +97,7 @@ To launch the controller tasks, run the following commands as per the need.
 #### Formation Control
 Open a new terminal and run
 ```ROS2
-ros2 launch launch_multi_agent fc_tasks_launch.py
+ros2 launch launch_multi_agent fc_servers_launch.py
 ```
 Open a new terminal and run
 ```ROS2
@@ -107,7 +107,7 @@ ros2 launch launch_multi_agent fc_clients_launch.py
 #### Leader Follower
 Open a new terminal and run
 ```ROS2
-ros2 launch launch_multi_agent lf_tasks_launch.py
+ros2 launch launch_multi_agent lf_servers_launch.py
 ```
 Open a new terminal and run
 ```ROS2
@@ -146,7 +146,7 @@ desired_distances ={
 ```
 Note:- For `desired_distances` dictionary, it's mandatory to have all the permutations of distances. For example, the distance between agents `i` and `j`, `d_ij` is equal to the distance between agents `j` and `i`, `d_ji`, but we need to provide the key value pairs for both distances.
 
-Since the formation controller is configured to use the distance-based formation by default, we need to make changes to the `_declare_parameters` function in `fc_client.py` and `fc_task.py` python files if we want to use the position-based formation. In `_declare_parameters` function of `fc_client.py` and `fc_task.py`, change the default value of the parameter `is_position_based` to `True`:
+Since the formation controller is configured to use the distance-based formation by default, we need to make changes to the `_declare_parameters` function in `fc_client.py` and `fc_server.py` python files if we want to use the position-based formation. In `_declare_parameters` function of `fc_client.py` and `fc_server.py`, change the default value of the parameter `is_position_based` to `True`:
 ```python
 self.declare_parameter("is_position_based", True, control_law_type_desc)
 ```
@@ -189,6 +189,6 @@ desired_distances ={
 Note:- For `desired_distances` dictionary, it's mandatory to have all the permutations of distances. For example, the distance between agents `i` and `j`, `d_ij` is equal to the distance between agents `j` an `i`, `d_ji`, but we need to provide the key value pairs for both distances.
 
 ### Client's launch file change
-In `multi-agent-robotics-controllers/ros2_multi_agent_ws/src/launch_multi_agent/launch/`, open the launch files for respective tasks and make the changes to the current node parameters and add new nodes as per the property of the new graph with `n` agents. The parameters should be self-explanatory in the launch files.
+In `multi-agent-robotics-controllers/ros2_multi_agent_ws/src/launch_multi_agent/launch/`, open the launch files for respective servers and make the changes to the current node parameters and add new nodes as per the property of the new graph with `n` agents. The parameters should be self-explanatory in the launch files.
 
 **⚠️ IMPORTANT:** After making the changes, start all the process again from the section **`Building the packages`.**
